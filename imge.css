@@ -92,11 +92,14 @@ body{
     width: 80%;
     margin: auto;
     height: auto;
+    display: block;
+    list-style: none;
+    text-align: center;
 }
 
 header{
     width: 100%;
-    height: 250px;
+    height: auto;
     box-shadow: 0 2px 8px 2px rgba(20,23,28, .15);
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
@@ -125,7 +128,6 @@ section{
     box-shadow: 0 2px 8px 2px rgba(20,23,28, .15);
     margin-top: 15px;
     overflow: auto;
-
 }
 
 .ilgiCeker{
@@ -135,38 +137,61 @@ section{
 }
 
 nav{
-    width:  20%;
+    display: inline-block;
+    position: relative;
     margin-top: 10px;
-    height: auto;
-    float: left;
 }
 
 nav ul{
-    width: auto;
-    height: 100%;
+    list-style-type: none;
     margin: 0;
     padding: 0;
-    
+    overflow: hidden;
+    background-color: black;
+    border-radius: 15px;
 }
 
 nav li {
-    list-style-type: none;
+    float: left;
 }
 
 nav li a{
-    height: 50px;
-    line-height: 50px;
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
     text-decoration: none;
-    color: black;
-    border-bottom: 1px solid #b4b4b4;
-    padding-left: 20px;
-    display: block;
-
 }
 
-nav li a:hover {
-    color: white;
+nav li a:hover, .anasayfaTemel:hover{
     background-color: #adadad;
+}
+
+li.anasayfaTemel{
+    display: inline-block;
+}
+
+.anasayfaTemelMenu{
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 160px;
+    border-radius: 20px;
+}
+
+.anasayfaTemelMenu a{
+    display: block;
+    text-align: left;
+    color: black;
+}
+
+.anasayfaTemelMenu a:hover{
+    color: black;
+    border-top-left-radius: 20px;
+}
+
+.anasayfaTemel:hover .anasayfaTemelMenu{
+    display: block;
 }
 
 i{
@@ -174,11 +199,10 @@ i{
 }
 
 main{
-    float: left;
     height: auto;
     width: 80%;
     padding: 10px;
-
+    margin-left: 150px;
 }
 
 .icerikbir{
@@ -436,7 +460,7 @@ h2{
 }
 
 #girisSayfasi{
-    height: 425px;
+    height: 475px;
     width: 500px;
     margin: 0px 500px 20px 500px;
     box-shadow: 0 2px 8px 2px rgba(20,23,28, .15);
@@ -503,7 +527,7 @@ h2{
     margin-right: 50px;
 }
 
-.singIn-Girisyap{
+.logIn-Girisyap{
     background-color: white;
     box-shadow: 0 2px 8px 2px rgba(20,23,28, .15);
     width: 200px;
@@ -525,7 +549,7 @@ h2{
     font-weight: bold;
     width: 400px;
     height: 75px;
-    margin: 100px 50px;
+    margin: 20px 50px;
     display: inline-block;
     padding: 15px 30px;
     background-color: red;
@@ -538,4 +562,46 @@ h2{
 
 .loginButton:hover{
     opacity: 0.8;
+}
+
+.singIn-Uyeol{
+    background-color: white;
+    box-shadow: 0 2px 8px 2px rgba(20,23,28, .15);
+    width: 200px;
+    height: 75px;
+    margin-top: 50px;
+    margin-left: 650px;
+    font-size: 30px;
+    padding: 15px 40px;
+    border-radius: 10px 10px 0px 0px;
+
+}
+
+.telefonNum{
+    height: auto;
+    width: 400px;
+    margin-left: 50px;
+    margin-top: 5px;
+}
+
+.telefonLabel{
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.telefonInput{
+    border-style: none;
+    box-shadow: 0 2px 8px 2px rgba(20,23,28, .15);
+    width: 400px;
+    height: 40px;
+    border-radius: 5px;
+}
+
+.uyeDegilse{
+    text-decoration: none;
+    margin: 20px;
+    color: black;
+    float: right;
+    font-size: 18px;
+    font-weight: bold;
 }
